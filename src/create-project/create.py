@@ -21,34 +21,33 @@ def main():
 	data_object.close()
 	os.chdir(project_folder)
 
-	lLevel = 0
+	last_level = 0
 	sFolder = ""
-	fError = False
+	script_error = False
 	# Parse lines and create folders
 	for line in data_lines:
-		# ToDo: make this option selectable by an argument
-		cST = line.rstrip("\n")
-		# cST = s.rstrip("\n").replace(" ", "_")
-		cSTemp = cST.replace("%date%", str(datetime.date.today()))
-		cLevel = cSTemp.rfind("\t")+1
-		cS = cSTemp.lstrip("\t")
-		doLev = get_level(cLevel, lLevel)
+		# ToDo: make this option selectable by an argument (What is this?)
+		current_line = line.rstrip("\n")
+		current_line_temp = current_line.replace("%date%", str(datetime.date.today()))
+		current_level = current_line_temp.rfind("\t")+1
+		current_line_temp_stripped = current_line_temp.lstrip("\t")
+		doLev = get_level(current_level, last_level)
 		if doLev == "child":
 			os.chdir(sFolder)
 		if doLev == "parent":
-			pDif = lLevel - cLevel
+			pDif = last_level - current_level
 			for i in range(pDif):
 				os.chdir("..")
 		try:
-			os.mkdir(cS)
+			os.mkdir(current_line_temp_stripped)
 		except Exception:
 			error = True
-		lLevel = cLevel
-		sFolder = cS
+		last_level = current_level
+		sFolder = current_line_temp_stripped
 	# print('Creating folders OK')
-	if fError == True:
+	if script_error == True:
 		print('Creating folders failed. :(')
-	if fError == False:
+	if script_error == False:
 		print('Alfred has created the folders as defined in "' + str(project_folder) + '"')
 
 
