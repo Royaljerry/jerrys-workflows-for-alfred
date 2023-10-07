@@ -19,18 +19,15 @@ def main():
 	data_object = open(data_file)
 	data_lines = data_object.readlines()
 	data_object.close()
-	# print('--> script_folder', script_folder)
-	# print('--> project_folder', project_folder)
-	# print('--> data_lines', data_lines)
 	os.chdir(project_folder)
 
 	lLevel = 0
 	sFolder = ""
 	fError = False
 	# Parse lines and create folders
-	for s in data_lines:
+	for line in data_lines:
 		# ToDo: make this option selectable by an argument
-		cST = s.rstrip("\n")
+		cST = line.rstrip("\n")
 		# cST = s.rstrip("\n").replace(" ", "_")
 		cSTemp = cST.replace("%date%", str(datetime.date.today()))
 		cLevel = cSTemp.rfind("\t")+1
