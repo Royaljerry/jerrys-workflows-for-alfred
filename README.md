@@ -4,6 +4,8 @@
 
 ## Create Folder Structure
 
+:warning: **This Workflow is deprecated, since it uses Python 2.x. It will be rewritten in Python 3.**
+
 *This script creates a folder structure defined in a text file.*
 
 ### Prerequisites
@@ -15,7 +17,7 @@
 
 Normally you won’t need to set it up, the workflow should work out of the box – in case you’d still need it, here are the details of the settings:
 
-![](docs/create-folder-structure/alfred-workflow-editor.png)
+![alfred workflow editor](docs/create-folder-structure/alfred-workflow-editor.png)
 
 ![](docs/create-folder-structure/alfred-workflow-script.png)
 
@@ -33,7 +35,7 @@ Then select _this file_ in Finder, open Alfred, and run “Create Folder Structu
 
 The syntax of the _definition text file_ looks :
 
-```
+```txt
 a folder
 another folder
 	and inside this one
