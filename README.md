@@ -17,19 +17,19 @@
 
 Normally you won’t need to set it up, the workflow should work out of the box – in case you’d still need it, here are the details of the settings:
 
-![alfred workflow editor](docs/create-folder-structure/alfred-workflow-editor.png)
+![alfred workflow editor](docs/create-project/alfred-workflow-editor.png)
 
-![](docs/create-folder-structure/alfred-workflow-script.png)
+![alfred workflow script](docs/create-project/alfred-workflow-script.png)
 
 ### Usage
 
 Create an UTF-8 encoded text file – the _definition text file_ (e.g. in TextEdit), and start typing folder names, row by row, one after another. Each entry (folder to be created) must be placed in a unique row. If a subfolder is required, indent it with a tab. Folder names can contain any legal characters the OS X supports.
 
-![](docs/create-folder-structure/definition-text-file.png)
+![definition text file](docs/create-project/definition-text-file.png)
 
 Then select _this file_ in Finder, open Alfred, and run “Create Folder Structure”. It will create the folder structure in the current Finder folder.
 
-![](docs/create-folder-structure/alfred-selection.png)
+![alfred selection](docs/create-project/alfred-selection.png)
 
 ### Syntax
 
