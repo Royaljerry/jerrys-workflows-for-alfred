@@ -26,7 +26,6 @@ def main():
 	script_error = False
 	
 	for line in data_lines:
-		# ToDo: make this option selectable by an argument (What is this?)
 		current_line = line.rstrip("\n")
 		current_line_temp = current_line.replace("%date%", str(datetime.date.today()))
 		current_level = current_line_temp.rfind("\t")+1
