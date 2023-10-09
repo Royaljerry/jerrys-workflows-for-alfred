@@ -22,34 +22,33 @@ def main():
 	os.chdir(project_folder)
 
 	last_level = 0
-	sFolder = ""
+	working_folder = ""
 	script_error = False
-	# Parse lines and create folders
+	
 	for line in data_lines:
 		# ToDo: make this option selectable by an argument (What is this?)
 		current_line = line.rstrip("\n")
 		current_line_temp = current_line.replace("%date%", str(datetime.date.today()))
 		current_level = current_line_temp.rfind("\t")+1
 		current_line_temp_stripped = current_line_temp.lstrip("\t")
-		doLev = get_level(current_level, last_level)
-		if doLev == "child":
-			os.chdir(sFolder)
-		if doLev == "parent":
-			pDif = last_level - current_level
-			for i in range(pDif):
+		do_level = get_level(current_level, last_level)
+		if do_level == "child":
+			os.chdir(working_folder)
+		if do_level == "parent":
+			folder_difference = last_level - current_level
+			for i in range(folder_difference):
 				os.chdir("..")
 		try:
 			os.mkdir(current_line_temp_stripped)
 		except Exception:
 			error = True
 		last_level = current_level
-		sFolder = current_line_temp_stripped
-	# print('Creating folders OK')
+		working_folder = current_line_temp_stripped
+	
 	if script_error == True:
 		print('Creating folders failed. :(')
 	if script_error == False:
 		print('Alfred has created the folders as defined in "' + str(project_folder) + '"')
-
 
 if __name__ == '__main__':
 	main()
