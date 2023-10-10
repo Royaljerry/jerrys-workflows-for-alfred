@@ -2,34 +2,38 @@
 
 *Some productivity workflows I have sporadically created thoughout the years.*
 
-## Create Folder Structure
-
-:warning: **This Workflow is deprecated, since it uses Python 2.x. It will be rewritten in Python 3.**
+## Create Project
 
 *This script creates a folder structure defined in a text file.*
 
 ### Prerequisites
 
-- Python 2.x
+- Python 3.x
 - Alfred Powerpack
 
 ### Setup
 
-Normally you won’t need to set it up, the workflow should work out of the box – in case you’d still need it, here are the details of the settings:
+Normally you won’t need to set it up, the workflow should work out of the box – in case you’d still need it, here is a breakdown:
 
-![alfred workflow editor](docs/create-project/alfred-workflow-editor.png)
+#### The Workflow
 
-![alfred workflow script](docs/create-project/alfred-workflow-script.png)
+![alfred workflow](docs/create-project/step-1.png)
+
+#### The File Action
+
+![file action](docs/create-project/step-2.png)
+
+#### The Script
+
+![run-script](docs/create-project/step-3.png)
 
 ### Usage
 
-Create an UTF-8 encoded text file – the _definition text file_ (e.g. in TextEdit), and start typing folder names, row by row, one after another. Each entry (folder to be created) must be placed in a unique row. If a subfolder is required, indent it with a tab. Folder names can contain any legal characters the OS X supports.
-
-![definition text file](docs/create-project/definition-text-file.png)
+Create an UTF-8 encoded text file – the _definition text file_ (e.g. in TextEdit), and start typing folder names, row by row, one after another. Each entry (folder to be created) must be placed in a unique row. If a subfolder is required, indent it *with a tab*. Folder names can contain any legal characters the OS X supports.
 
 Then select _this file_ in Finder, open Alfred, and run “Create Folder Structure”. It will create the folder structure in the current Finder folder.
 
-![alfred selection](docs/create-project/alfred-selection.png)
+![alfred selection](docs/create-project/step-4.png)
 
 ### Syntax
 
