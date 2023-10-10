@@ -48,4 +48,6 @@ another folder
 	then a fourth one
 ```
 
-One extra feature: the script will replace the `%date%` string in the definition file with the actual date.
+### Extra Feature
+
+The script will replace the `%date%` string in the definition file with the actual date.
