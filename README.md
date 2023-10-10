@@ -31,7 +31,7 @@ Normally you won’t need to set it up, the workflow should work out of the box 
 
 Create an UTF-8 encoded text file – the _definition text file_ (e.g. in TextEdit), and start typing folder names, row by row, one after another. Each entry (folder to be created) must be placed in a unique row. If a subfolder is required, indent it *with a tab*. Folder names can contain any legal characters the OS X supports.
 
-Then select _this file_ in Finder, open Alfred, and run “Create Folder Structure”. It will create the folder structure in the current Finder folder.
+Then select _this file_ in Finder, open Alfred, and run “RJ: Create Project”. It will create the folder structure in the current Finder folder.
 
 ![alfred selection](docs/create-project/step-4.png)
 
