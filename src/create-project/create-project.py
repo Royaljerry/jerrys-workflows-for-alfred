@@ -9,12 +9,30 @@ def get_level (current_level, last_level):
 	if current_level > last_level: return "child"
 	if current_level < last_level: return "parent"
 
+def get_working_data(args):
+	if len(args) == 2:
+		data = {
+			'project_folder': os.path.dirname(args[1]),
+			'data_file': args[1]
+		}
+	elif len(args) == 3:
+		data = {
+			'project_folder': args[1],
+			'data_file': args[2]
+		}
+	else:
+		print('no args')
+		return
+	return(data)
+
+
 def main():
 	# input
-	script_folder = os.getcwd()
-	project_folder = sys.argv[1]
-	data_file = sys.argv[2]
-	
+	# script_folder = os.getcwd()
+	data = get_working_data(sys.argv)
+	project_folder = data['project_folder']
+	data_file = data['data_file']
+
 	# parse
 	data_object = open(data_file)
 	data_lines = data_object.readlines()
@@ -40,7 +58,7 @@ def main():
 		try:
 			os.mkdir(current_line_temp_stripped)
 		except Exception:
-			error = True
+			script_error = True
 		last_level = current_level
 		working_folder = current_line_temp_stripped
 	
