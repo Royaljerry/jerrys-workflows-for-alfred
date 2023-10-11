@@ -81,7 +81,7 @@ root-folder-3
 
 Adam Pócs
 
-- [Email](mailto:royaljerry@gmail.com)
+- `royaljerry@gmail.com`
 - [Facebook](https://www.facebook.com/royaljerry)
 - [Portfolio](https://royaljerry.myportfolio.com/)
 - [GitHub](https://github.com/Royaljerry)
@@ -90,3 +90,7 @@ Adam Pócs
 ## Copyright
 
 These workflows and scripts are licensed under [The Unlicense](https://choosealicense.com/licenses/unlicense/) license.
+
+## And
+
+Free 🇺🇦 Ukraine, free 🇮🇱 Israel.
