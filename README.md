@@ -42,7 +42,7 @@ Create an UTF-8 encoded text file – the *definition file*, select the it in Fi
 - Indentions must be written with TAB characters.
 - The script will replace the `%date%` string in the *definition file* with the actual date.
 
-#### Eaxmple 1
+#### Example 1
 
 Contents of the *definition file*:
 
@@ -58,7 +58,7 @@ root-folder-2
 root-folder-3
 ```
 
-#### Eaxmple 2
+#### Example 2
 
 Contents of the *definition file*:
 
