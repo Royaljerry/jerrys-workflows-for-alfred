@@ -2,7 +2,7 @@
 
 *Some productivity workflows I have sporadically created thoughout the years.*
 
-## Create Project
+## RJ: Create Project
 
 *This script creates a folder structure defined in a text file.*
 
@@ -29,25 +29,46 @@ Normally you won’t need to set it up, the workflow should work out of the box 
 
 ### Usage
 
-Create an UTF-8 encoded text file – the _definition text file_ (e.g. in TextEdit), and start typing folder names, row by row, one after another. Each entry (folder to be created) must be placed in a unique row. If a subfolder is required, indent it *with a tab*. Folder names can contain any legal characters the OS X supports.
-
-Then select _this file_ in Finder, open Alfred, and run “RJ: Create Project”. It will create the folder structure in the current Finder folder.
+Create an UTF-8 encoded text file – the *definition file*, select the it in Finder (or any file manager app), get Alfred actions panel (with the hotkey set in Preferences → Features → Universal Actions → Selection Hotkey), and run **RJ: Create Project**. The folder structure will be created where the *definition file* resides.
 
 ![alfred selection](docs/create-project/step-4.png)
 
 ### Syntax
 
-The syntax of the _definition text file_ looks :
+- One line represents a folder.
+- Lines with the same indention levels represent sibling folders.
+- A positive indention to the previous line represents a subfolder.
+- A negative indention to the previous line represents a parent folder.
+- Indentions must be written with TAB characters.
+- The script will replace the `%date%` string in the *definition file* with the actual date.
+
+#### Eaxmple 1
+
+Contents of the *definition file*:
 
 ```txt
-a folder
-another folder
-	and inside this one
-	i have
-		a third folder
-	then a fourth one
+root-folder-1
+root-folder-2
+	sub-folder-1
+	sub-folder-2
+	sub-folder-3
+		sub-sub-folder-1
+		sub-sub-folder-2
+	sub-folder-4
+root-folder-3
 ```
 
-### Extra Feature
+#### Eaxmple 2
 
-The script will replace the `%date%` string in the definition file with the actual date.
+Contents of the *definition file*:
+
+```txt
+root-folder-1
+%root-%date-folder-2
+	sub-folder-1
+	sub-folder-2
+		sub-sub-%date%-folder-1
+		sub-sub-folder-2
+	%date%
+root-folder-3
+```
