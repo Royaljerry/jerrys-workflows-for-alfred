@@ -64,7 +64,7 @@ Contents of the *definition file*:
 
 ```txt
 root-folder-1
-%root-%date-folder-2
+root-%date%-folder-2
 	sub-folder-1
 	sub-folder-2
 		sub-sub-%date%-folder-1
