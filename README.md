@@ -36,7 +36,7 @@ Create an UTF-8 encoded text file – the *definition file*, select the it in Fi
 ### Syntax
 
 - One line represents a folder.
-- Lines with the same indention levels represent sibling folders.
+- Lines on the same indention level represent sibling folders.
 - A positive indention to the previous line represents a subfolder.
 - A negative indention to the previous line represents a parent folder.
 - Indentions must be written with TAB characters.
