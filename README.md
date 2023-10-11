@@ -72,3 +72,21 @@ root-folder-1
 	%date%
 root-folder-3
 ```
+
+## Downloads
+
+- [RJ: Create Project](https://github.com/Royaljerry/jerrys-workflows-for-alfred/blob/master/dist/rj-create-project.alfredworkflow)
+
+## Contact
+
+Adam Pócs
+
+- [Email](mailto:royaljerry@gmail.com)
+- [Facebook](https://www.facebook.com/royaljerry)
+- [Portfolio](https://royaljerry.myportfolio.com/)
+- [GitHub](https://github.com/Royaljerry)
+- [LinkedIn](https://www.linkedin.com/in/royaljerry/)
+
+## Copyright
+
+These workflows and scripts are licensed under [The Unlicense](https://choosealicense.com/licenses/unlicense/) license.
