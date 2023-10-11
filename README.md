@@ -75,7 +75,7 @@ root-folder-3
 
 ## Downloads
 
-- [RJ: Create Project](https://github.com/Royaljerry/jerrys-workflows-for-alfred/blob/master/dist/rj-create-project.alfredworkflow)
+- [RJ: Create Project](https://github.com/Royaljerry/jerrys-workflows-for-alfred/raw/master/dist/rj-create-project.alfredworkflow)
 
 ## Contact
 
